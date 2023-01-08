@@ -120,7 +120,7 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would to thank ``` Microverse``` for providing me the materials that enabled me to finish this exercise
+- I would like to thank ``` Microverse``` for providing me the materials that enabled me to finish this exercise
 
 <!-- LICENSE -->
 
