@@ -62,10 +62,6 @@ In order to run this project you need:
 
 To have installed Nodejs in your Code editor. In case you don't have it, go to this [site](https://nodejs.org/en/) and download the setup based on your PC
 
-### Setup
-
-Clone this repository to your desired folder:
-
 ## Setup
 In a desired folder or directory in the CLI, run the command:
 
