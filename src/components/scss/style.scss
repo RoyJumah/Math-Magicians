@@ -16,21 +16,22 @@ html {
   justify-content: center;
   font-family: $font-stack;
 }
+
 input[type='button'] {
   width: 160px;
   height: 140px;
   float: left;
   padding: 0;
   box-sizing: border-box;
-  background: $font-stack;
+  font-family: $font-stack;
   border: 0.05px solid #ced4da;
   font-size: 30px;
   line-height: 30px;
   font-weight: 700;
   color: $button-color;
   cursor: pointer;
-  font-size: 30px;
 }
+
 input[type='text'] {
   width: 270px;
   height: 60px;
@@ -55,6 +56,7 @@ input[type='text'] {
   top: 2px;
   color: #fff;
 }
+
 .btnTop {
   color: white;
   font-size: 14px;
