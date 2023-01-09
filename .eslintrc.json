@@ -17,6 +17,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
+
   "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
