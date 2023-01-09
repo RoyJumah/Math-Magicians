@@ -28,10 +28,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [React-Redux Boilerplate] <a name="about-project"></a>
+# 📖 [Math-Magicians] <a name="about-project"></a>
 
-> This is a special repository created to set up React and Redux installation files
-
+> This is a Single Page Application that allows users to make simple calculations and read and a random math-related quote
 
 ## 🛠 Built With <a name="built-with"></a>
 
