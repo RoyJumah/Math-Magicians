@@ -68,6 +68,7 @@ class Calculator extends React.Component {
                   value=" 0"
                   className="special__button-zero"
                 />
+                <input type="button" name="dot" value=" . " />
                 <input
                   type="button"
                   name="equals"
