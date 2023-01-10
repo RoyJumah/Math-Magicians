@@ -1,7 +1,10 @@
+/* eslint-disable */
 import React from 'react';
 import '../css/style.css';
+// import calculate from '../../logic/Calculate';
+// import operate from '../../logic/operate';
 
-class Calculator extends React.Component {
+export default class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,80 +12,31 @@ class Calculator extends React.Component {
 
   render() {
     return (
-      <div>
-        <table align="center" className="bg__color container">
-          <tbody>
-            <tr>
-              <td className="bg__color">
-                <input type="text" name="Input" size="35" id="display" />
-                <br />
-              </td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td>
-                <input type="button" name="ac" value=" AC " />
-                <input type="button" name="plus/minus" value="+/- " />
-                <input type="button" name="percentage" value=" % " />
-                <input
-                  type="button"
-                  name="add"
-                  className="btnTop assignment__operators"
-                  value=" + "
-                />
-                <br />
-                <input type="button" name="seven" value=" 7" />
-                <input type="button" name="eight" value=" 8 " />
-                <input type="button" name="nine" value=" 9 " />
-                <input
-                  type="button"
-                  name="mul"
-                  value=" x "
-                  className="assignment__operators"
-                />
-                <br />
-                <input type="button" name="four" value=" 4 " />
-                <input type="button" name="five" value=" 5 " />
-                <input type="button" name="six" value=" 6 " />
-                <input
-                  type="button"
-                  name="minus"
-                  value=" - "
-                  className="assignment__operators"
-                />
-                <br />
-                <input type="button" name="one" value=" 1 " />
-                <input type="button" name="two" value=" 2 " />
-                <input type="button" name="three" value=" 3" />
-                <input
-                  type="button"
-                  name="div"
-                  value=" + "
-                  className="assignment__operators"
-                />
-                <br />
-                <input
-                  type="button"
-                  name="zero"
-                  value=" 0"
-                  className="special__button-zero"
-                />
-                <input type="button" name="dot" value=" . " />
-                <input
-                  type="button"
-                  name="equals"
-                  value=" = "
-                  className="special__button-equals assignment__operators"
-                />
-                <br />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="calculator-grid">
+        <div className="output">
+          <div className="previous-operand"></div>
+          <div className="current-operand"></div>
+        </div>
+        <button>AC</button>
+        <button>+/-</button>
+        <button>%</button>
+        <button className="special__operators">÷</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button className="special__operators">x</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button className="special__operators">-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button className="special__operators">+</button>
+        <button className="span-two">0</button>
+        <button>.</button>
+        <button className="special__operators">=</button>
       </div>
     );
   }
 }
-
-export default Calculator;
