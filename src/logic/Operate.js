@@ -1,6 +1,7 @@
 import Big from 'big.js';
 
 export default function operate(numberOne, numberTwo, operation) {
+  if (!numberOne || !numberTwo) return null;
   const one = Big(numberOne);
   const two = Big(numberTwo);
   if (operation === '+') {
@@ -26,5 +27,5 @@ export default function operate(numberOne, numberTwo, operation) {
       return "Can't find modulo as can't divide by 0.";
     }
   }
-  throw Error(`Unknown operation '${operation}'`);
+  return 0;
 }

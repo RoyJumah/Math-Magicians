@@ -14,13 +14,13 @@ export default class Calculator extends React.Component {
     return (
       <div className="calculator-grid">
         <div className="output">
-          <div className="previous-operand"></div>
-          <div className="current-operand"></div>
+          <div className="previous-operand">123</div>
+          <div className="current-operand"> 123</div>
         </div>
         <button>AC</button>
         <button>+/-</button>
         <button>%</button>
-        <button className="special__operators">÷</button>
+        <button className="special__operators">/</button>
         <button>7</button>
         <button>8</button>
         <button>9</button>
