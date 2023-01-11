@@ -12,7 +12,7 @@ export default class Calculator extends React.Component {
     };
   }
 
-  handleClick = buttonName => {
+  handleClick = (buttonName) => {
     const { total, next, operation } = this.state;
     const newCalculation = calculate({ total, next, operation }, buttonName);
     if (newCalculation) {
