@@ -3,80 +3,57 @@
 @import 'utilities';
 @import 'queries';
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
 }
 
-html {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
   justify-content: center;
-  font-family: $font-stack;
+
+  & > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #fff;
+    outline: none;
+  }
 }
 
-input[type='button'] {
-  width: 160px;
-  height: 140px;
-  float: left;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: $font-stack;
-  border: 0.05px solid #ced4da;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 700;
-  color: $button-color;
-  cursor: pointer;
+.span-two {
+  grid-column: span 2;
 }
 
-input[type='text'] {
-  width: 270px;
-  height: 60px;
-  float: left;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  background: none;
-  text-align: right;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 60px;
-  margin: 0 25px;
+.output {
+  grid-column: 1 /-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  & .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+  }
+
+  & .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
 }
 
-#display {
-  height: 80px;
-  text-align: right;
-  outline: none;
-  font-size: 18px;
-  left: 2px;
-  top: 2px;
-  color: #fff;
-}
-
-.btnTop {
-  color: white;
-  font-size: 14px;
-  margin: auto;
-  width: 50px;
-  height: 25px;
-}
-
-.special__button-zero {
-  width: 320px !important;
-}
-
-.special__button-equals {
-  float: right !important;
-}
-
-.assignment__operators {
+.special__operators {
   background-color: $tertiary-color !important;
-}
-
-.bg__color {
-  background-color: $secondary-color;
 }
