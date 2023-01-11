@@ -1,41 +1,114 @@
-/* eslint-disable */
 import React from 'react';
 import '../css/style.css';
-// import calculate from '../../logic/Calculate';
-// import operate from '../../logic/operate';
+import calculate from '../../logic/Calculate';
 
 export default class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
   }
 
+  handleClick = buttonName => {
+    const { total, next, operation } = this.state;
+    const newCalculation = calculate({ total, next, operation }, buttonName);
+    if (newCalculation) {
+      this.setState({ ...newCalculation });
+    }
+  };
+
   render() {
+    const { total, next } = this.state;
     return (
       <div className="calculator-grid">
         <div className="output">
-          <div className="previous-operand">123</div>
-          <div className="current-operand"> 123</div>
+          <div className="previous-operand">{total}</div>
+          <div className="current-operand">{next || total}</div>
         </div>
-        <button>AC</button>
-        <button>+/-</button>
-        <button>%</button>
-        <button className="special__operators">/</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button className="special__operators">x</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button className="special__operators">-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button className="special__operators">+</button>
-        <button className="span-two">0</button>
-        <button>.</button>
-        <button className="special__operators">=</button>
+        <button type="button" onClick={() => this.handleClick('AC')}>
+          AC
+        </button>
+        <button type="button" onClick={() => this.handleClick('+/-')}>
+          +/-
+        </button>
+        <button type="button" onClick={() => this.handleClick('%')}>
+          %
+        </button>
+        <button
+          type="button"
+          className="special__operators"
+          onClick={() => this.handleClick('÷')}
+        >
+          /
+        </button>
+        <button type="button" onClick={() => this.handleClick('7')}>
+          7
+        </button>
+        <button type="button" onClick={() => this.handleClick('8')}>
+          8
+        </button>
+        <button type="button" onClick={() => this.handleClick('9')}>
+          9
+        </button>
+        <button
+          type="button"
+          className="special__operators"
+          onClick={() => this.handleClick('x')}
+        >
+          x
+        </button>
+        <button type="button" onClick={() => this.handleClick('4')}>
+          4
+        </button>
+        <button type="button" onClick={() => this.handleClick('5')}>
+          5
+        </button>
+        <button type="button" onClick={() => this.handleClick('6')}>
+          6
+        </button>
+        <button
+          type="button"
+          className="special__operators"
+          onClick={() => this.handleClick('-')}
+        >
+          -
+        </button>
+        <button type="button" onClick={() => this.handleClick('1')}>
+          1
+        </button>
+        <button type="button" onClick={() => this.handleClick('2')}>
+          2
+        </button>
+        <button type="button" onClick={() => this.handleClick('3')}>
+          3
+        </button>
+        <button
+          type="button"
+          className="special__operators"
+          onClick={() => this.handleClick('+')}
+        >
+          +
+        </button>
+        <button
+          type="button"
+          className="span-two"
+          onClick={() => this.handleClick('0')}
+        >
+          0
+        </button>
+        <button type="button" onClick={() => this.handleClick('.')}>
+          .
+        </button>
+        <button
+          type="button"
+          className="special__operators"
+          onClick={() => this.handleClick('=')}
+        >
+          =
+        </button>
       </div>
     );
   }
