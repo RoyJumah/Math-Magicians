@@ -1,115 +1,112 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/style.css';
 import calculate from '../../logic/Calculate';
 
-export default class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  handleClick = (buttonName) => {
-    const { total, next, operation } = this.state;
-    const newCalculation = calculate({ total, next, operation }, buttonName);
+  const handleClick = (buttonName) => {
+    const newCalculation = calculate(state, buttonName);
     if (newCalculation) {
-      this.setState({ ...newCalculation });
+      setState({ ...newCalculation });
     }
   };
 
-  render() {
-    const { total, next } = this.state;
-    return (
-      <div className="calculator-grid">
-        <div className="output">
-          <div className="previous-operand">{total}</div>
-          <div className="current-operand">{next || total}</div>
-        </div>
-        <button type="button" onClick={() => this.handleClick('AC')}>
-          AC
-        </button>
-        <button type="button" onClick={() => this.handleClick('+/-')}>
-          +/-
-        </button>
-        <button type="button" onClick={() => this.handleClick('%')}>
-          %
-        </button>
-        <button
-          type="button"
-          className="special__operators"
-          onClick={() => this.handleClick('÷')}
-        >
-          /
-        </button>
-        <button type="button" onClick={() => this.handleClick('7')}>
-          7
-        </button>
-        <button type="button" onClick={() => this.handleClick('8')}>
-          8
-        </button>
-        <button type="button" onClick={() => this.handleClick('9')}>
-          9
-        </button>
-        <button
-          type="button"
-          className="special__operators"
-          onClick={() => this.handleClick('x')}
-        >
-          x
-        </button>
-        <button type="button" onClick={() => this.handleClick('4')}>
-          4
-        </button>
-        <button type="button" onClick={() => this.handleClick('5')}>
-          5
-        </button>
-        <button type="button" onClick={() => this.handleClick('6')}>
-          6
-        </button>
-        <button
-          type="button"
-          className="special__operators"
-          onClick={() => this.handleClick('-')}
-        >
-          -
-        </button>
-        <button type="button" onClick={() => this.handleClick('1')}>
-          1
-        </button>
-        <button type="button" onClick={() => this.handleClick('2')}>
-          2
-        </button>
-        <button type="button" onClick={() => this.handleClick('3')}>
-          3
-        </button>
-        <button
-          type="button"
-          className="special__operators"
-          onClick={() => this.handleClick('+')}
-        >
-          +
-        </button>
-        <button
-          type="button"
-          className="span-two"
-          onClick={() => this.handleClick('0')}
-        >
-          0
-        </button>
-        <button type="button" onClick={() => this.handleClick('.')}>
-          .
-        </button>
-        <button
-          type="button"
-          className="special__operators"
-          onClick={() => this.handleClick('=')}
-        >
-          =
-        </button>
+  const { total, next } = state;
+
+  return (
+    <div className="calculator-grid">
+      <div className="output">
+        <div className="previous-operand">{total}</div>
+        <div className="current-operand">{next || total}</div>
       </div>
-    );
-  }
-}
+      <button type="button" onClick={() => handleClick('AC')}>
+        AC
+      </button>
+      <button type="button" onClick={() => handleClick('+/-')}>
+        +/-
+      </button>
+      <button type="button" onClick={() => handleClick('%')}>
+        %
+      </button>
+      <button
+        type="button"
+        className="special__operators"
+        onClick={() => handleClick('÷')}
+      >
+        /
+      </button>
+      <button type="button" onClick={() => handleClick('7')}>
+        7
+      </button>
+      <button type="button" onClick={() => handleClick('8')}>
+        8
+      </button>
+      <button type="button" onClick={() => handleClick('9')}>
+        9
+      </button>
+      <button
+        type="button"
+        className="special__operators"
+        onClick={() => handleClick('x')}
+      >
+        x
+      </button>
+      <button type="button" onClick={() => handleClick('4')}>
+        4
+      </button>
+      <button type="button" onClick={() => handleClick('5')}>
+        5
+      </button>
+      <button type="button" onClick={() => handleClick('6')}>
+        6
+      </button>
+      <button
+        type="button"
+        className="special__operators"
+        onClick={() => handleClick('-')}
+      >
+        -
+      </button>
+      <button type="button" onClick={() => handleClick('1')}>
+        1
+      </button>
+      <button type="button" onClick={() => handleClick('2')}>
+        2
+      </button>
+      <button type="button" onClick={() => handleClick('3')}>
+        3
+      </button>
+      <button
+        type="button"
+        className="special__operators"
+        onClick={() => handleClick('+')}
+      >
+        +
+      </button>
+      <button
+        type="button"
+        className="span-two"
+        onClick={() => handleClick('0')}
+      >
+        0
+      </button>
+      <button type="button" onClick={() => handleClick('.')}>
+        .
+      </button>
+      <button
+        type="button"
+        className="special__operators"
+        onClick={() => handleClick('=')}
+      >
+        =
+      </button>
+    </div>
+  );
+};
+
+export default Calculator;
