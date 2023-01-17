@@ -20,7 +20,7 @@ const Calculator = () => {
 
   return (
     <div className="display-flex__calculator">
-      <h1>Lets do some math!</h1>
+      <h1>Let&apos;s do some math!</h1>
 
       <div className="calculator-grid">
         <div className="output">

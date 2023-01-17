@@ -11,10 +11,12 @@
   .container {
     width: 800px;
   }
+
   #display {
     height: 40px;
   }
 }
+
 * {
   box-sizing: border-box;
 }
@@ -47,6 +49,7 @@ p {
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
   justify-content: center;
 }
+
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
@@ -69,10 +72,12 @@ p {
   word-wrap: break-word;
   word-break: break-all;
 }
+
 .output .previous-operand {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
 }
+
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
@@ -113,6 +118,7 @@ a.active {
   padding-bottom: 0.25rem;
   border-bottom: 4px solid #95bcf0;
 }
+
 .page__header {
   color: #fff;
   padding: 1.2rem;
@@ -131,6 +137,5 @@ a.active {
 .display-flex__calculator {
   display: flex;
   justify-content: center;
-
   gap: 9.6rem;
 }
