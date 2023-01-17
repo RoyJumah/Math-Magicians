@@ -2,7 +2,10 @@ import { NavLink } from 'react-router-dom';
 import './css/style.css';
 
 const MainHeader = () => (
-  <header className="header">
+  <div className="display__flex">
+    <div className="header">
+      <h1 className="page__header">Math Magicians</h1>
+    </div>
     <nav>
       <ul>
         <li>
@@ -16,7 +19,7 @@ const MainHeader = () => (
         </li>
       </ul>
     </nav>
-  </header>
+  </div>
 );
 
 export default MainHeader;

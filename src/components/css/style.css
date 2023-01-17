@@ -20,7 +20,7 @@
 }
 
 html {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
@@ -79,20 +79,20 @@ p {
 }
 
 .special__operators {
-  background-color: #ffc078 !important;
+  background-color: #95bcf0 !important;
 }
 .header {
-  width: 100%;
+  /* width: 100%;
   height: 5rem;
   background-color: #044599;
-  padding: 0 10%;
+  padding: 0 10%; */
 }
 
 .header nav {
   height: 100%;
 }
 
-.header ul {
+ul {
   height: 100%;
   list-style: none;
   display: flex;
@@ -102,20 +102,34 @@ p {
   justify-content: center;
 }
 
-.header li {
+li {
   margin: 0 1rem;
   width: 5rem;
 }
 
-.header a {
+a {
   color: white;
   text-decoration: none;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active{
-  color: #95bcf0 ;
-  padding-bottom: 0.25rem ;
+a:hover,
+a:active,
+a.active {
+  color: #95bcf0;
+  padding-bottom: 0.25rem;
   border-bottom: 4px solid #95bcf0;
+}
+.page__header {
+  color: #fff;
+  padding: 1.2rem;
+}
+
+.display__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  background-color: #044599;
+  padding: 0 10%;
 }
