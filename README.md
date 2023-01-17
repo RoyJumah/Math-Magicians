@@ -65,7 +65,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a> (**Not yet Available**)
 
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://monumental-brigadeiros-794e69.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
