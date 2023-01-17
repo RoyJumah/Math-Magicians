@@ -1,1 +1,121 @@
-.container{max-width:100vh}.calculator{border:2px solid #000;border-radius:10px}@media(max-width: 680px){.container{width:800px}#display{height:40px}}*{box-sizing:border-box}html{font-family:"Noto Sans JP",sans-serif}body{margin:0;background-color:#e0e9f5}main{margin-top:7rem;text-align:center}h1,h2,h3,p{color:#042b5f}.calculator-grid{display:grid;margin-top:2rem;grid-template-columns:repeat(4, 6rem);grid-template-rows:minmax(7rem, auto) repeat(5, 6rem);justify-content:center}.calculator-grid>button{cursor:pointer;font-size:2rem;border:1px solid #fff;outline:none}.span-two{grid-column:span 2}.output{grid-column:1/-1;background-color:rgba(0,0,0,.75);display:flex;flex-direction:column;align-items:flex-end;justify-content:space-around;padding:.75rem;word-wrap:break-word;word-break:break-all}.output .previous-operand{color:rgba(255,255,255,.75);font-size:1.5rem}.output .current-operand{color:#fff;font-size:2.5rem}.special__operators{background-color:#ffc078 !important}
+.container {
+  max-width: 100vh;
+}
+
+.calculator {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: 800px;
+  }
+  #display {
+    height: 40px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #e0e9f5;
+}
+
+main {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #042b5f;
+}
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
+}
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.special__operators {
+  background-color: #ffc078 !important;
+}
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: #044599;
+  padding: 0 10%;
+}
+
+.header nav {
+  height: 100%;
+}
+
+.header ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header li {
+  margin: 0 1rem;
+  width: 5rem;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active{
+  color: #95bcf0 ;
+  padding-bottom: 0.25rem ;
+  border-bottom: 4px solid #95bcf0;
+}
