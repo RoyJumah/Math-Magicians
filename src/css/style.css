@@ -1,11 +1,9 @@
-@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap';
-
 .container {
   max-width: 100vh;
 }
 
 .calculator {
-  border: 2px solid #000;
+  border: 2px solid black;
   border-radius: 10px;
 }
 
@@ -13,20 +11,33 @@
   .container {
     width: 800px;
   }
-
   #display {
     height: 40px;
   }
 }
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
   margin: 0;
+  background-color: #e0e9f5;
+}
+
+main {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #042b5f;
 }
 
 .calculator-grid {
@@ -36,7 +47,6 @@ body {
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
   justify-content: center;
 }
-
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
@@ -59,17 +69,15 @@ body {
   word-wrap: break-word;
   word-break: break-all;
 }
-
 .output .previous-operand {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
 }
-
 .output .current-operand {
-  color: #fff;
+  color: white;
   font-size: 2.5rem;
 }
 
 .special__operators {
   background-color: #ffc078 !important;
-}
+}/*# sourceMappingURL=style.css.map */
