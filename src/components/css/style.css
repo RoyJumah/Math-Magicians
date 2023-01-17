@@ -81,12 +81,6 @@ p {
 .special__operators {
   background-color: #95bcf0 !important;
 }
-.header {
-  /* width: 100%;
-  height: 5rem;
-  background-color: #044599;
-  padding: 0 10%; */
-}
 
 .header nav {
   height: 100%;
@@ -132,4 +126,11 @@ a.active {
   height: 5rem;
   background-color: #044599;
   padding: 0 10%;
+}
+
+.display-flex__calculator {
+  display: flex;
+  justify-content: center;
+
+  gap: 9.6rem;
 }
