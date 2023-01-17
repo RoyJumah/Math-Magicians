@@ -16,14 +16,14 @@ class App extends React.Component {
       <div>
         <MainHeader />
         <main>
-          <Route path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/quote">
+          <Route exact path="/quote">
             <Quote />
           </Route>
 
-          <Route path="/calculator">
+          <Route exact path="/calculator">
             <Calculator />
           </Route>
         </main>

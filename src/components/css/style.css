@@ -137,5 +137,5 @@ a.active {
 .display-flex__calculator {
   display: flex;
   justify-content: center;
-  gap: 9.6rem;
+  gap: 6.4rem;
 }
