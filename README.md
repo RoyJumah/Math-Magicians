@@ -56,7 +56,7 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a> (**Not yet Available**)
+## 🚀 Live Demo <a name="live-demo"></a>
 
 
 - [Deployment on Netlify](https://monumental-brigadeiros-794e69.netlify.app/)
