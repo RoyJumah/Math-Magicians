@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h2><b>Math-Magicians</b></h2>
 
 </div>
 
@@ -22,7 +22,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -60,8 +59,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a> (**Not yet Available**)
 
 
-- [Live Demo Link](https://monumental-brigadeiros-794e69.netlify.app/)
-
+- [Deployment on Netlify](https://monumental-brigadeiros-794e69.netlify.app/)
+- [Deployment on Render](https://royjumah-mathmagicians.onrender.com)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
